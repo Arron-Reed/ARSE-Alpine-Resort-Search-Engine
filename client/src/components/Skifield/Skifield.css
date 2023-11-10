@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.skifield-page {
+    min-height: 95vh;
+    background: url("/snowboard-bg3.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-space {
+    height: 105px;
+}
+
+.skifield-container {
+    margin: 0 10vw;
+    padding: 20px 80px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.skifield-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -56px;
+}
+
+.skifield-rating-box {
+    display: flex;
+    justify-content: end;
+    width: 300px;
+}
+
+.ratings-container {
+    background: #eee;
+    width: 250px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 2px 15px;
+    text-align: center;
+}
+
+.buttons-box {
+    display: flex;
+    width: 300px;
+}
+
+#bh-button {
+    height: 50px;
+    width: 140px;
+}
+
+#fav-button {
+    height: 50px;
+    width: 140px;
+}
+
+.skifield-top {
+    margin-top: 30px;
+    display: grid;
+    column-gap: 80px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#skifield-image {
+    width: 33vw;
+    height: 50vh;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.skilifts-box {
+    display: flex;
+    padding: 20px 0;
+}
+
+.skilifts-left {
+    padding: 0 105px 0 10px;
+    font-size: 1.4em;
+}
+
+#skilifts {
+    font-size: 1.6em;
+    padding-left: 20px;
+}
+
+.skilifts-right {
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+.ski-slopes-box {
+    display: flex;
+    border-top: 1px solid #aaa;
+    padding: 20px 0 10px;
+}
+
+.ski-slopes-left {
+    display: flex;
+    align-items: center;
+    padding: 0 103px 0 10px;
+    font-size: 1.4em;
+}
+
+#skifield-slopes {
+    font-size: 1.6em;
+    padding-left: 20px;
+}
+
+.ski-slopes-right {
+    text-align: left;
+}
+
+.ski-slopes-block {
+    display: flex;
+    font-size: 1.2em;
+}
+
+.slopes-colour {
+    margin-right: 15px;
+}
+
+.easy {
+    background: #73bcea;
+    width: 25px;
+    color: #73bcea;
+    margin-bottom: 10px;
+}
+
+.intermediate {
+    background: #ea7373;
+    width: 25px;
+    color: #ea7373;
+    margin-bottom: 10px;
+}
+
+.difficult {
+    background: black;
+    width: 25px;
+    color: black;
+}
+
+.slopes-difficulty p {
+    margin-right: 65px;
+    padding-bottom: 10px;
+}
+
+.slopes-distance p {
+    padding-bottom: 10px;
+}
+
+.skipass-price-box {
+    display: flex;
+    border-top: 1px solid #aaa;
+    padding: 20px 0;
+}
+
+.skipass-price-left {
+    display: flex;
+    align-items: center;
+    padding: 0 52px 0 10px;
+    font-size: 1.4em;
+}
+
+#skifield-price {
+    font-size: 1.6em;
+    padding-left: 20px;
+}
+
+.skipass-price-right {
+    text-align: left;
+    padding: 0 55px;
+}
+
+.skipass-price-block {
+    display: flex;
+    
+}
+
+.adultPrice {
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.category {
+    font-size: 1.2em;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.skipass-price {
+    font-size: 1.2em;
+    position: relative;
+    border-top: 1px solid black;
+    padding: 8px 20px;
+}
+
+.elevation-box {
+    display: flex;
+    border-top: 1px solid #aaa;
+    padding: 25px 0;
+}
+
+.elevation-left {
+    padding-right: 40px;
+    font-size: 1.4em;
+    text-align: left;
+}
+
+.elevation-info {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.topToBottom {
+    margin-top: 17px;
+}
+
+.lowest {
+    margin-top: 16px;
+}
+
+.description {
+    padding: 19px 0 5px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.skifield-bottom-info {
+    display: grid;
+    column-gap: 80px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.generalSeason {
+    display: flex;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.generalHours-left {
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.nearbyTowns {
+    display: flex;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.nearbyTowns-left {
+    margin-right: 50px;
+    margin-bottom: 30px;
+}

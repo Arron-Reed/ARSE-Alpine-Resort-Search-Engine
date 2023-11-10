@@ -1,0 +1,69 @@
+
+
+.searchBar-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.bh-button {
+    background-color: #2aaa74;
+    height: 57px;
+    width: 120px;
+    margin-left: 10px;
+    padding: 0 15px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.f-button {
+    background-color: #f16a52;
+    height: 57px;
+    width: 120px;
+    margin-left: 10px;
+    padding: 0 15px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.input-wrapper {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    height: 57px;
+    padding: 0 15px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+#fa-solid {
+    font-size: 1.6em;
+}
+
+#search-input {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-left: 10px;
+}
+
+input:focus {
+    outline: none;
+}

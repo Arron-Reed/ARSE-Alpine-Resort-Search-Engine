@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.dashboard-page {
+    background: url("/snowboard-bg3.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.dash-navbar-space {
+    height: 10vh;
+}
+
+.dashboard-container {
+    display: flex;
+    text-align: left;
+}
+
+.dash-nav {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 80vh;
+    left: 0;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    width: 340px;
+}
+
+.nav-logo {
+    text-align: center;
+    display: flex;
+    margin: 20px 0 20px 15px;
+}
+
+.nav-logo img {
+    width: 80px;
+}
+
+.nav-a {
+    position: relative;
+    color: #162938;
+    font-size: 1.2em;
+    display: table;
+    width: 280px;
+    padding: 10px;
+}
+
+.nav-a:hover {
+    background: #d3e6ff;
+}
+
+.nav-a i {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 9px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.nav-item {
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+}
+
+#logout {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.main {
+    position: relative;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+.main-top {
+    display: flex;
+    width: 100%;
+}
+
+.main-top h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.main-top i {
+    position: absolute;
+    right: 0;
+    font-size: 1.8em;
+    margin: 15px 30px;
+    color: #162938;
+    cursor: pointer;
+}
+
+.main-dashboard {
+    display: flex;
+}
+
+.main-dashboard .card {
+    width: 32%;
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+#profile {
+    background: #fff1d6;
+    opacity: 0.8;
+}
+
+#skifields {
+    background: #d3e6ff;
+    opacity: 0.8;
+}
+
+#favourites {
+    background: #ffd9d9;
+    opacity: 0.8;
+}
+
+#been {
+    background: #daffe5;
+    opacity: 0.8;
+}
+
+.main-dashboard .card h3 {
+    margin:7px;
+    font-size: 1.6em;
+}
+
+.main-dashboard .card p {
+    font-size: 1.2em;
+}
+
+.main-dashboard .card button {
+    color: #fff;
+    background: #95AF9C;
+    padding: 8px 24px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    margin: 15px 0 6px 0;
+    cursor: pointer;
+}
+
+.main-dashboard .card button:hover {
+    background-color: #162938  ;
+}
+
+.main-dashboard .card i {
+    font-size: 2em;
+    padding: 10px;
+}
+
+
+
+/* 
+User Profile on the Dashboard ------------------------------------------------ 
+*/
+
+.profile-container {
+   padding: 10px 0 20px 20px;
+   width: 870px;
+   margin-top: 20px;
+   margin-left: 10px;
+   background: transparent;
+   border: 2px solid rgba(255, 255, 255, 0.5);
+   border-radius: 20px;
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-header {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+  
+.user-card:before {
+    content: '';
+    position: absolute;
+    height: 300%;
+    width: 193px;
+    background: #d3e6ff;
+    top: -60px;
+    left: -125px;
+    z-index: 0;
+    transform: rotate(17deg);
+}
+  
+.user-card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    z-index: 3;
+    padding-right: 40px;
+}
+  
+.user-card-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+.user-card-info h4 {
+    font-size: 2em;
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 16px;
+    margin-right: 80px;
+}
+
+.profile-name {
+    display: flex;
+    align-items: baseline;
+}
+
+
+#role {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #2aaa74;
+    text-transform: capitalize;
+}
+  
+.user-card-info p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.user-card-info p span {
+     font-weight: 700;
+     margin-right: 10px;
+}
+
+.profile-buttons {
+    position: absolute;
+    right: 25px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .user-card {
+      flex-direction: row;
+      align-items: flex-start;
+    }   
+    .user-card-img {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .user-card-info {
+      text-align: left;
+    }
+}
+ 
+@media (max-width: 767px){
+    .profile-container{
+       padding-top: 3%;
+    }
+    .user-card:before {
+       width: 300%;
+       height: 200px;
+       transform: rotate(0);
+    }
+    .user-card-info h2 {
+       margin-top: 25px;
+       font-size: 35px;
+    }
+    .user-card-info p span {
+       display: block;
+       margin-bottom: 15px;
+       font-size: 18px;
+    }
+}
+
+/*
+-------------------------------------------------------------------------
+*/
+
+.favourites-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    font-size: 1.2em;
+    width: 98.5%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+    height: 420px;
+}
+
+.favourites-container::-webkit-scrollbar {
+	display: none;
+}
+
+.favourites-container img {
+    width: 130px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 10px
+}
+
+#user-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+th, td {
+    text-align: left;
+    padding: 7px;
+}
+  
+th {
+    color: #666;
+    font-weight: normal;
+}
+  
+.skifield-info {
+    display: flex;
+    align-items: center;
+    
+}
+  
+.table-row:hover {
+    background: rgba(211, 230, 255, 0.5)
+}
+.name {
+    font-weight: bold;
+}
+  
+.email {
+    color: #666;
+}
+  
+.status {
+    border-radius: 10px;
+    padding: 5px 12px;
+    color: #fff;
+}
+  
+.active-button {
+    background-color: #5cb85c;
+}
+  
+.edit-button {
+    font-size: 0.9em;
+    background-color: #f16a52;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#edit-button1 {
+    font-size: 0.9em;
+    background-color: #2aaa74;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#delete-button1 {
+    font-size: 0.9em;
+    background-color: #f16a52;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 15px;
+    color: #fff;
+    cursor: pointer;
+}
+  
+.edit-button:hover {
+    background-color: #162938;
+}
+
+#delete-button1:hover {
+    background-color: #162938;
+}
+ 
+#edit-button1:hover {
+    background-color: #162938;
+}
+
+  #profile {
+    background: #fff1d6;
+    opacity: 0.8;
+}
+
+#skifields {
+    background: #d3e6ff;
+    opacity: 0.8;
+}
+
+#favourites {
+    background: #ffd9d9;
+    opacity: 0.8;
+}
+
+#been {
+    background: #daffe5;
+    opacity: 0.8;
+}
+
+#users {
+    background: #d3e6ff;
+    opacity: 0.8;
+}
