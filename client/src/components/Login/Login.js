@@ -36,7 +36,7 @@ const Login = ({ setToken, setUserId }) => {
             email: email,
             password: password
         };
-        const res = yield axios_1.default.post("http://localhost:3001/users/login", newLoginUser);
+        const res = yield axios_1.default.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/login", newLoginUser);
         console.log(res.data.accessToken);
         console.log("User Id: " + res.data.userId);
         setToken(res.data.accessToken);
@@ -49,7 +49,7 @@ const Login = ({ setToken, setUserId }) => {
             email: email,
             password: password
         };
-        yield axios_1.default.post("http://localhost:3001/users/register", newUser);
+        yield axios_1.default.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/register", newUser);
         navigate("/");
         react_toastify_1.toast.success('User Successfully Created');
     });

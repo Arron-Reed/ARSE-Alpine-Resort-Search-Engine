@@ -33,7 +33,7 @@ const Home = ({ token, userId, setFavourites, setBeenHere, favourites, beenHere,
         fetchData();
     }, [token]);
     const getAllSkifields = () => __awaiter(void 0, void 0, void 0, function* () {
-        const res = yield axios_1.default.get("http://localhost:3001/skifields");
+        const res = yield axios_1.default.get("http://arse-alpine-resort-search-engine-production.up.railway.app/skifields");
         const skifieldsArray = res.data.map((skifield) => ({
             _id: skifield._id,
             name: skifield.name,
@@ -59,11 +59,11 @@ const Home = ({ token, userId, setFavourites, setBeenHere, favourites, beenHere,
     const getUserLists = () => __awaiter(void 0, void 0, void 0, function* () {
         try {
             const headers = { Authorization: `Bearer ${token}` };
-            const favRes = yield axios_1.default.get(`http://localhost:3001/users/favourites/${userId}`, { headers });
+            const favRes = yield axios_1.default.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/favourites/${userId}`, { headers });
             const favouriteList = favRes.data.favourites;
             const favIds = favouriteList.map((item) => item._id);
             setFavourites(favIds);
-            const beenHereRes = yield axios_1.default.get(`http://localhost:3001/users/beenHere/${userId}`, { headers });
+            const beenHereRes = yield axios_1.default.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenHere/${userId}`, { headers });
             const BHlist = beenHereRes.data.beenhere;
             const beenHereIds = BHlist.map((item) => item._id);
             setBeenHere(beenHereIds);
@@ -85,7 +85,7 @@ const Home = ({ token, userId, setFavourites, setBeenHere, favourites, beenHere,
                 setFavourites([...favourites, skifieldId]);
                 react_toastify_1.toast.success('Successfully added to your Favourite List!');
             }
-            yield axios_1.default.post("http://localhost:3001/users/savefavourite", { userId, skifieldId }, { headers });
+            yield axios_1.default.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/savefavourite", { userId, skifieldId }, { headers });
         }
         catch (error) {
             console.error("Error saving favorite: ", error);
@@ -100,7 +100,7 @@ const Home = ({ token, userId, setFavourites, setBeenHere, favourites, beenHere,
                 setBeenHere([...beenHere, skifieldId]);
                 react_toastify_1.toast.success('Successfully added to your Been Here List!');
             }
-            yield axios_1.default.post("http://localhost:3001/users/beenhere", { userId, skifieldId }, { headers });
+            yield axios_1.default.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere", { userId, skifieldId }, { headers });
         }
         catch (error) {
             console.error("Error saving been here: ", error);

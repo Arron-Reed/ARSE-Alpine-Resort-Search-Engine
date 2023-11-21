@@ -35,7 +35,7 @@ const Login: FC<LoginProps> = ({setToken, setUserId}) => {
             email: email,
             password: password
         }
-        const res = await axios.post("http://localhost:3001/users/login", newLoginUser);
+        const res = await axios.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/login", newLoginUser);
         console.log(res.data.accessToken);
         console.log("User Id: " + res.data.userId)
         setToken(res.data.accessToken);
@@ -49,7 +49,7 @@ const Login: FC<LoginProps> = ({setToken, setUserId}) => {
             email: email,
             password: password
         }
-        await axios.post("http://localhost:3001/users/register", newUser);
+        await axios.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/register", newUser);
         navigate("/"); toast.success('User Successfully Created');
     }
 

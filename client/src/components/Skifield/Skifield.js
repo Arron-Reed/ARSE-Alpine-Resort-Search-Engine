@@ -25,7 +25,7 @@ const Skifield = ({ token, userId }) => {
     const [skifield, setSkifield] = (0, react_1.useState)(null);
     const getSkifield = () => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            const res = yield axios_1.default.get("http://localhost:3001/skifields/" + skifieldId);
+            const res = yield axios_1.default.get("http://arse-alpine-resort-search-engine-production.up.railway.app/skifields/" + skifieldId);
             setSkifield(res.data);
         }
         catch (error) {
@@ -37,7 +37,7 @@ const Skifield = ({ token, userId }) => {
             const headers = {
                 Authorization: `Bearer ${token}`,
             };
-            yield axios_1.default.post("http://localhost:3001/users/savefavourite", { userId, skifieldId }, { headers });
+            yield axios_1.default.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/savefavourite", { userId, skifieldId }, { headers });
         }
         catch (error) {
             console.error("Error saving favorite: ", error);
@@ -48,7 +48,7 @@ const Skifield = ({ token, userId }) => {
             const headers = {
                 Authorization: `Bearer ${token}`,
             };
-            yield axios_1.default.post("http://localhost:3001/users/beenhere", { userId, skifieldId }, { headers });
+            yield axios_1.default.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere", { userId, skifieldId }, { headers });
         }
         catch (error) {
             console.error("Error saving been here: ", error);

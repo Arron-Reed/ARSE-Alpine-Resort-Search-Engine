@@ -14,7 +14,7 @@ const Skifields: FC = () => {
     const navigate = useNavigate();
 
     const getAllSkifields = async () => {
-        const res = await axios.get("http://localhost:3001/skifields");
+        const res = await axios.get("http://arse-alpine-resort-search-engine-production.up.railway.app/skifields");
         console.log(res.data)
         const skifieldsArray = res.data
 

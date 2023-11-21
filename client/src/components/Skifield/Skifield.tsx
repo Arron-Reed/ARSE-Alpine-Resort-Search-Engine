@@ -22,7 +22,7 @@ const Skifield: FC<SkifieldProps> = ({ token, userId }) => {
 
     const getSkifield = async () => {
         try {
-            const res = await axios.get("http://localhost:3001/skifields/"+skifieldId);
+            const res = await axios.get("http://arse-alpine-resort-search-engine-production.up.railway.app/skifields/"+skifieldId);
             setSkifield(res.data)
         }
 
@@ -37,7 +37,7 @@ const Skifield: FC<SkifieldProps> = ({ token, userId }) => {
                 Authorization: `Bearer ${token}`,
               };
 
-            await axios.post("http://localhost:3001/users/savefavourite",
+            await axios.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/savefavourite",
                 { userId, skifieldId },
                 { headers }
             );
@@ -54,7 +54,7 @@ const Skifield: FC<SkifieldProps> = ({ token, userId }) => {
                 Authorization: `Bearer ${token}`,
               };
 
-            await axios.post("http://localhost:3001/users/beenhere",
+            await axios.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere",
                 { userId, skifieldId },
                 { headers }
             );

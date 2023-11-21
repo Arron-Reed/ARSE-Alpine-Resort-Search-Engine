@@ -31,7 +31,7 @@ const SearchBar: FC<SearchProps> = ({ setSkifields, token, userId, searchTerm })
         console.log(searchTerm)
     const searchData = async (query = search) => {
         try {
-            const searchRes = await axios.get("http://localhost:3001/skifields/search?q=" + query);
+            const searchRes = await axios.get("http://arse-alpine-resort-search-engine-production.up.railway.app/skifields/search?q=" + query);
             const searchArray = searchRes.data.map( (skifield: ISkifield) => ({
                 _id: skifield._id,
                 name: skifield.name,
@@ -66,7 +66,7 @@ const SearchBar: FC<SearchProps> = ({ setSkifields, token, userId, searchTerm })
 
     const getFavourites = async () => {
         try {
-            const favRes = await axios.get(`http://localhost:3001/users/favourites/${userId}`, {
+            const favRes = await axios.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/favourites/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -83,7 +83,7 @@ const SearchBar: FC<SearchProps> = ({ setSkifields, token, userId, searchTerm })
     const getPlacesIveBeen = async () => {
 
         try {
-            const beenRes = await axios.get(`http://localhost:3001/users/beenhere/${userId}`, {
+            const beenRes = await axios.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -104,6 +104,7 @@ const SearchBar: FC<SearchProps> = ({ setSkifields, token, userId, searchTerm })
                     <div className="input-wrapper">
                         <i id="fa-solid" className="fa-solid fa-magnifying-glass"></i>
                         <input id="search-input" onChange={handleInput} className="searchBar" placeholder="Search skifield..." />
+                        <i id="refresh"className="fa-solid fa-arrow-rotate-right"></i>
                     </div>
                     <div className="favourite-button">
                         <button className="f-button" onClick={getFavourites}>Favourite</button>

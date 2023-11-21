@@ -32,7 +32,7 @@ const SearchBar = ({ setSkifields, token, userId, searchTerm }) => {
     console.log(searchTerm);
     const searchData = (query = search) => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            const searchRes = yield axios_1.default.get("http://localhost:3001/skifields/search?q=" + query);
+            const searchRes = yield axios_1.default.get("http://arse-alpine-resort-search-engine-production.up.railway.app/skifields/search?q=" + query);
             const searchArray = searchRes.data.map((skifield) => ({
                 _id: skifield._id,
                 name: skifield.name,
@@ -64,7 +64,7 @@ const SearchBar = ({ setSkifields, token, userId, searchTerm }) => {
     };
     const getFavourites = () => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            const favRes = yield axios_1.default.get(`http://localhost:3001/users/favourites/${userId}`, {
+            const favRes = yield axios_1.default.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/favourites/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -78,7 +78,7 @@ const SearchBar = ({ setSkifields, token, userId, searchTerm }) => {
     });
     const getPlacesIveBeen = () => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            const beenRes = yield axios_1.default.get(`http://localhost:3001/users/beenhere/${userId}`, {
+            const beenRes = yield axios_1.default.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

@@ -23,7 +23,7 @@ const Skifields = () => {
     const [skifields, setSkifields] = (0, react_1.useState)([]);
     const navigate = (0, react_router_dom_1.useNavigate)();
     const getAllSkifields = () => __awaiter(void 0, void 0, void 0, function* () {
-        const res = yield axios_1.default.get("http://localhost:3001/skifields");
+        const res = yield axios_1.default.get("http://arse-alpine-resort-search-engine-production.up.railway.app/skifields");
         console.log(res.data);
         const skifieldsArray = res.data;
         setSkifields(skifieldsArray);

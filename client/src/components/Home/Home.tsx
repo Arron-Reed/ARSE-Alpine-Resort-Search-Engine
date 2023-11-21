@@ -42,7 +42,7 @@ const Home: FC<SkifieldProps> = ({ token, userId, setFavourites, setBeenHere, fa
     },[token])
     
     const getAllSkifields = async () => {
-        const res = await axios.get("http://localhost:3001/skifields"); 
+        const res = await axios.get("http://arse-alpine-resort-search-engine-production.up.railway.app/skifields"); 
         const skifieldsArray = res.data.map( (skifield: ISkifield) => ({
             _id: skifield._id,
             name: skifield.name,
@@ -70,12 +70,12 @@ const Home: FC<SkifieldProps> = ({ token, userId, setFavourites, setBeenHere, fa
     const getUserLists = async () => {
         try {
             const headers = {Authorization: `Bearer ${token}`};
-            const favRes = await axios.get(`http://localhost:3001/users/favourites/${userId}`, { headers });
+            const favRes = await axios.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/favourites/${userId}`, { headers });
             const favouriteList = favRes.data.favourites;
             const favIds = favouriteList.map((item: Favourite) => item._id)
             setFavourites(favIds);
 
-            const beenHereRes = await axios.get(`http://localhost:3001/users/beenHere/${userId}`, { headers });
+            const beenHereRes = await axios.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenHere/${userId}`, { headers });
             const BHlist = beenHereRes.data.beenhere;
             const beenHereIds = BHlist.map((item: BeenHere) => item._id)
             setBeenHere(beenHereIds);
@@ -100,7 +100,7 @@ const Home: FC<SkifieldProps> = ({ token, userId, setFavourites, setBeenHere, fa
                 toast.success('Successfully added to your Favourite List!');
             }
 
-            await axios.post("http://localhost:3001/users/savefavourite",
+            await axios.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/savefavourite",
                 { userId, skifieldId },
                 { headers }
             );
@@ -122,7 +122,7 @@ const Home: FC<SkifieldProps> = ({ token, userId, setFavourites, setBeenHere, fa
                 toast.success('Successfully added to your Been Here List!');
             }
 
-            await axios.post("http://localhost:3001/users/beenhere",
+            await axios.post("http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere",
                 { userId, skifieldId },
                 { headers }
             );

@@ -35,7 +35,7 @@ const Dashboard: FC<AuthProps> = ({ userId, token }) => {
                     Authorization: `Bearer ${token}`
                 }
             }    
-            const res = await axios.get("http://localhost:3001/users/" + userId, accessToken);
+            const res = await axios.get("http://arse-alpine-resort-search-engine-production.up.railway.app/users/" + userId, accessToken);
             setId(res.data._id)
             setEmail(res.data.email)
             setUsername(res.data.username)
@@ -219,7 +219,7 @@ const Dashboard: FC<AuthProps> = ({ userId, token }) => {
 
     const getFavourites = async () => {
         try {
-            const res = await axios.get(`http://localhost:3001/users/favourites/${userId}`, {
+            const res = await axios.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/favourites/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -235,7 +235,7 @@ const Dashboard: FC<AuthProps> = ({ userId, token }) => {
 
     const removeFavourite = async (skifieldId: string) => {
         try {
-            await axios.delete(`http://localhost:3001/users/favourites/${userId}/${skifieldId}`, {
+            await axios.delete(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/favourites/${userId}/${skifieldId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -250,7 +250,7 @@ const Dashboard: FC<AuthProps> = ({ userId, token }) => {
 
     const getBeenHere = async () => {
         try {
-            const res = await axios.get(`http://localhost:3001/users/beenhere/${userId}`, {
+            const res = await axios.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -266,7 +266,7 @@ const Dashboard: FC<AuthProps> = ({ userId, token }) => {
 
     const removeBeenHere = async (skifieldId: string) => {
         try {
-            await axios.delete(`http://localhost:3001/users/beenhere/${userId}/${skifieldId}`, {
+            await axios.delete(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere/${userId}/${skifieldId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -288,7 +288,7 @@ const Dashboard: FC<AuthProps> = ({ userId, token }) => {
 
     const getUsers = async () => {
         try {
-            const res = await axios.get("http://localhost:3001/users", {
+            const res = await axios.get("http://arse-alpine-resort-search-engine-production.up.railway.app/users", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

@@ -37,7 +37,7 @@ const Dashboard = ({ userId, token }) => {
                     Authorization: `Bearer ${token}`
                 }
             };
-            const res = yield axios_1.default.get("http://localhost:3001/users/" + userId, accessToken);
+            const res = yield axios_1.default.get("http://arse-alpine-resort-search-engine-production.up.railway.app/users/" + userId, accessToken);
             setId(res.data._id);
             setEmail(res.data.email);
             setUsername(res.data.username);
@@ -202,7 +202,7 @@ const Dashboard = ({ userId, token }) => {
     };
     const getFavourites = () => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            const res = yield axios_1.default.get(`http://localhost:3001/users/favourites/${userId}`, {
+            const res = yield axios_1.default.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/favourites/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -216,7 +216,7 @@ const Dashboard = ({ userId, token }) => {
     });
     const removeFavourite = (skifieldId) => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            yield axios_1.default.delete(`http://localhost:3001/users/favourites/${userId}/${skifieldId}`, {
+            yield axios_1.default.delete(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/favourites/${userId}/${skifieldId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -229,7 +229,7 @@ const Dashboard = ({ userId, token }) => {
     });
     const getBeenHere = () => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            const res = yield axios_1.default.get(`http://localhost:3001/users/beenhere/${userId}`, {
+            const res = yield axios_1.default.get(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -243,7 +243,7 @@ const Dashboard = ({ userId, token }) => {
     });
     const removeBeenHere = (skifieldId) => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            yield axios_1.default.delete(`http://localhost:3001/users/beenhere/${userId}/${skifieldId}`, {
+            yield axios_1.default.delete(`http://arse-alpine-resort-search-engine-production.up.railway.app/users/beenhere/${userId}/${skifieldId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -263,7 +263,7 @@ const Dashboard = ({ userId, token }) => {
     */
     const getUsers = () => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            const res = yield axios_1.default.get("http://localhost:3001/users", {
+            const res = yield axios_1.default.get("http://arse-alpine-resort-search-engine-production.up.railway.app/users", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
